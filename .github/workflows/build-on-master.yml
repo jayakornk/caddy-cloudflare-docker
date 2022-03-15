@@ -9,6 +9,12 @@ on:
     paths:
       - 'Dockerfile'
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+  DOCKERHUB_SLUG: jayakornk/caddy-cloudflare-docker
+  GHCR_SLUG: ghcr.io/jayakornk/caddy-cloudflare-docker
+
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
